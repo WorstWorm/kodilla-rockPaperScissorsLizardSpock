@@ -7,6 +7,8 @@ import java.awt.event.*;
 import java.util.Hashtable;
 import java.util.Random;
 
+import static com.kodilla.rps.UIConstants.*;
+
 public class GameBoxWithGui {
     String selectedOption;
     int difficultyLvl = 1;
@@ -171,10 +173,10 @@ public class GameBoxWithGui {
 
 //FRAME - GAME NAME LABEL SETTINGS =====================================================================================
         JLabel title = new JLabel("ROCK - PAPER - SCISSORS - LIZARD - SPOCK");
-        title.setFont(new Font("Dialog", Font.BOLD, 20));
+        title.setFont(TITLE_FONT);
 
 //FRAME - GAME INFO LABEL SETTINGS =====================================================================================
-        informationBox.setForeground(Color.BLUE);
+        informationBox.setForeground(ACTIVE_FONT_COLOR);
 
 //SCORE TABLE SETTINGS =================================================================================================
         scoreTable.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
@@ -197,9 +199,9 @@ public class GameBoxWithGui {
             }
         });
 
-        playerLabel.setFont(new Font("Dialog", Font.PLAIN, 20));
-        playerNameLabel.setFont(new Font("Dialog", Font.PLAIN, 20));
-        playerNameLabel.setForeground(Color.BLUE);
+        playerLabel.setFont(TEXT_FONT);
+        playerNameLabel.setFont(TEXT_FONT);
+        playerNameLabel.setForeground(ACTIVE_FONT_COLOR);
 
 //OPTIONS BUTTONS OPERATIONS AND SETTINGS ==============================================================================
         optionButtons[0] = new JButton("ROCK");
@@ -329,37 +331,37 @@ public class GameBoxWithGui {
         });
 
 //SETTING BOUNDS OF FRAME ELEMENTS =====================================================================================
-        frame.setSize(500, 500);
+        frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
 
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         frame.setLocation(dim.width/2-frame.getSize().width/2, dim.height/2-frame.getSize().height/2);
 
-        informationBox.setBounds(30, 110, 420, 90);
+        informationBox.setBounds(30, 110, INFOBOX_WIDTH, INFOBOX_HEIGHT);
 
-        title.setBounds(20, 10, 490, 20);
+        title.setBounds(20, 10, TITLE_WIDTH, TITLE_HEIGHT);
 
-        inputNameBox.setBounds(30, 50, 300, 25);
-        confirmButton.setBounds(350, 50, 100, 55);
-        playerLabel.setBounds(30, 50, 100, 25);
-        playerNameLabel.setBounds(120, 50, 300, 25);
+        inputNameBox.setBounds(30, 50, INPUT_WIDTH, INPUT_HEIGHT);
+        confirmButton.setBounds(350, 50, CONBTN_WIDTH, CONBTN_HEIGHT);
+        playerLabel.setBounds(30, 50, PLAYER_LAB_WIDTH, PLAYER_LAB_HEIGHT);
+        playerNameLabel.setBounds(120, 50, PLAYER_NAME_WIDTH, PLAYER_NAME_HEIGHT);
 
-        roundSelectorLabel.setBounds(30, 83, 60, 20);
-        roundsRadioButtons[0].setBounds(90, 83, 45, 20);
-        roundsRadioButtons[1].setBounds(140, 83, 45, 20);
-        roundsRadioButtons[2].setBounds(190, 83, 45, 20);
-        roundsRadioButtons[3].setBounds(240,83,45,20);
+        roundSelectorLabel.setBounds(30, 83, 60, RAD_HEIGHT);
+        roundsRadioButtons[0].setBounds(90, 83, RAD_WIDTH, RAD_HEIGHT);
+        roundsRadioButtons[1].setBounds(140, 83, RAD_WIDTH, RAD_HEIGHT);
+        roundsRadioButtons[2].setBounds(190, 83, RAD_WIDTH, RAD_HEIGHT);
+        roundsRadioButtons[3].setBounds(240,83,RAD_WIDTH,RAD_HEIGHT);
 
-        difficultySlider.setBounds(400, 210, 75, 230);
+        difficultySlider.setBounds(400, 210, SLID_WIDTH, SLID_HEIGHT);
 
-        optionButtons[0].setBounds(30, 210, 100, 25);
-        optionButtons[1].setBounds(30, 260, 100, 25);
-        optionButtons[2].setBounds(30, 310, 100, 25);
-        optionButtons[3].setBounds(30, 360, 100, 25);
-        optionButtons[4].setBounds(30, 410, 100, 25);
-        optionButtons[5].setBounds(230, 210, 100, 25);
-        optionButtons[6].setBounds(230, 260, 100, 25);
+        optionButtons[0].setBounds(30, 210, BTN_WIDTH, BTN_HEIGHT);
+        optionButtons[1].setBounds(30, 260, BTN_WIDTH, BTN_HEIGHT);
+        optionButtons[2].setBounds(30, 310, BTN_WIDTH, BTN_HEIGHT);
+        optionButtons[3].setBounds(30, 360, BTN_WIDTH, BTN_HEIGHT);
+        optionButtons[4].setBounds(30, 410, BTN_WIDTH, BTN_HEIGHT);
+        optionButtons[5].setBounds(230, 210, BTN_WIDTH, BTN_HEIGHT);
+        optionButtons[6].setBounds(230, 260, BTN_WIDTH, BTN_HEIGHT);
 
-        scoreTable.setBounds(180, 310, 200, 125);
+        scoreTable.setBounds(180, 310, TAB_WIDTH, TAB_HEIGHT);
 
 //ADDING ELEMENTS TO MAIN FRAME =============================================================================================
         frame.add(title);
